@@ -251,7 +251,7 @@ class Util_Workflow_Type_Golang extends Util_Workflow_Type_Abstract
         $command = '# date ' . date('Y-m-d H:i:s')  . "\n"
                     . $this->getExportGoFlags()     . "\\\n"
                     . 'cd ' . $tmpPath              . ' && ' . "\\\n"
-                    . $go . ' get -d -v -insecure ./... && ' . "\\\n"
+                    // . $go . ' get -d -v -insecure ./... && ' . "\\\n"
                     . $go . ' test ' . $filePath . ' ' . $testFilePath;
 
         $result = $this->runCommand($command);
